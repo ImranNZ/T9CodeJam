@@ -11,6 +11,8 @@ namespace T9.App
         {
             var services = new ServiceCollection();
             services.AddTransient<IKeypad, T9Keypad>();
+            services.AddTransient<IReader, Reader>();
+            services.AddTransient<IWriter, Writer>();
             services.AddSingleton(File.OpenText("./Input/C-large-practice.in"));
             services.AddSingleton(File.AppendText("./Output/C-large-practice.out"));
             services.AddTransient<FileParser>();

@@ -7,12 +7,12 @@ namespace T9.Classes
     public class FileParser : IInputParser
     {
         private readonly IMessageTranslator _translator;
-        private readonly StreamReader _reader;
-        private readonly StreamWriter _writer;
+        private readonly IReader _reader;
+        private readonly IWriter _writer;
         private int _numberOfCases = 0;
         private List<string> _messages;
 
-        public FileParser(IMessageTranslator translator, StreamReader reader, StreamWriter writer)
+        public FileParser(IMessageTranslator translator, IReader reader, IWriter writer)
         {
             _translator = translator;
             _reader = reader;
@@ -42,6 +42,7 @@ namespace T9.Classes
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception occurred: {ex.Message}");
+                throw;
             }
         }
 
@@ -61,6 +62,7 @@ namespace T9.Classes
             catch (Exception ex)
             {
                 Console.WriteLine($"{ex.Message}");
+                throw;
             }
         }
 
