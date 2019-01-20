@@ -14,4 +14,4 @@ Tests cover the logic for translating the message (T9MessageTranslator.cs) and t
 
 # Improvements
 
-If I were to spend more time on this exercise, I would potentially refactor the keypad could also use a dictionary instead of a list.
+If I were to spend more time on this exercise, I would potentially refactor the keypad to use a dictionary instead of a list.
