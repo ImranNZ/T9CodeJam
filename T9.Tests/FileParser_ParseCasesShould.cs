@@ -24,6 +24,7 @@ namespace T9.Tests
         }
 
         [Theory]
+        [InlineData("a")]
         [InlineData(@"vTvjqvjzeKMDKZX0MuY1QnBVWkh9Yo2f28sczFvUrue9fYn4ieDnpVYVbaYsOva3bbZHHwQf8PZO7ds0IHDSOzydoFn1ToiOR0RKPFeiWp0nRPWzHsZc1YYG
         OWIGKsl4MwqKMCGgiXvzs6RxfjrdL7sRxxPKCZ3eqsTWSs3Qpj03suaQj6o4LMmuhH6XXNViCceRoa3w6I5jhXkT1BLEYmbn6n0fFstMPhSeX5g2BAVyWIqMwBXwOvF23MTtZ3
         RKny6tEpPB6bcg1YRdETLeNnQ7sPlfDTnsbRGkTPwULXMjrVWiVk6UyxMIQw4Tpme7H6HmYmgmaJuHqKtjd1vg8LNTRMB0z4GssuCAeSQMGn4Dp5bEzSrd9Ax9igdlqjpfpxUG
