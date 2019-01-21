@@ -38,12 +38,22 @@ namespace T9.Tests
         [Theory]
         [InlineData("101")]
         [InlineData("0")]
-        public void ThrowExceptionGivenInvalidInput(string input)
+        public void ThrowArgumentExceptionGivenInvalidInputRange(string input)
         {
             _reader
                 .Setup(x => x.ReadLine())
                 .Returns(input);
             Assert.Throws<ArgumentException>(() => _parser.ParseNumberOfCases());
         }
+
+        [InlineData("a")]
+        public void ThrowExceptionGivenInvalidInputCharacter(string input)
+        {
+            _reader
+                .Setup(x => x.ReadLine())
+                .Returns(input);
+            Assert.Throws<Exception>(() => _parser.ParseNumberOfCases());
+        }
+
     }
 }
