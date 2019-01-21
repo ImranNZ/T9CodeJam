@@ -50,11 +50,13 @@ namespace T9.Classes
         {
             try
             {
+                var input = _reader.ReadLine();
+                if (input.Length < 1 || input.Length > 1000) throw new ArgumentException("The message must be between 1 and 1000 characters.");
+
                 int i = 1;
+
                 while (_numberOfCases != 0)
                 {
-                    var input = _reader.ReadLine();
-                    if (input.Length < 1 || input.Length > 1000) throw new ArgumentException("The message must be between 1 and 100 characters.");
                     _messages.Add($"Case #{i}: {_translator.TranslateMessage(input)}");
                     i++;
                     _numberOfCases--;
